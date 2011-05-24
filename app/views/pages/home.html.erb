@@ -1,0 +1,51 @@
+<div class="landing">
+	<div class="center">
+		<h2>Questions Asked and Answered, Quickly!</h2>
+	</div>
+	<div class="value">
+		<table>
+			<tr>
+					<td>
+						<img src="/images/group_2.png"></img> 
+					</td>
+					<td>
+						<p><strong>Don't trust Q&A sites?</strong>
+							<br />Quezzi incorporates your friends to give you answers that you trust.</p>
+					</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="/images/speech_bubbles5.png"></img>
+				</td>
+				<td>
+					<p><strong>Q&A shouldn't end with the answer!</strong> 
+						<br />
+						There needs to be a discussion and here you can do that.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="/images/user_comment.png"></img>
+				</td>
+				<td>
+					<p><strong>Instant Reponses</strong><br />Some questions need instant responses and that is exactly what we support!</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="sample_question">
+		<h3>Current Question:</h3>
+		<p>What Is A Good Father's Day Gift?</p>
+	</div>
+	<div class="signup_button">
+		<% if user_signed_in? %>
+			<a class="button" href="/messages"><span>Answer Questions!</span></a>
+		<% else %>
+			<a class="button" href="/authentications"><span>Answer Questions!</span></a>
+		<% end %>
+	</div>
+</div>
+	
+
+	<!-- <%= link_to "Answer A Question", :controller => 'messages', :action => 'index' %> -->
