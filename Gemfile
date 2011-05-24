@@ -4,6 +4,7 @@ gem 'rails', '3.0.5'
 gem 'devise', :git => "git://github.com/plataformatec/devise.git"
 gem 'omniauth'
 gem 'jquery-rails'
+gem 'faye'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
