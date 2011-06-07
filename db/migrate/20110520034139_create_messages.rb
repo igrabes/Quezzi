@@ -1,9 +1,9 @@
 class CreateMessages < ActiveRecord::Migration
   def self.up
     create_table :messages do |t|
-      t.references :user
-      t.text :content
-
+      t.string   "username"
+      t.string   "message"
+      t.integer  "chat_id"
       t.timestamps
     end
   end

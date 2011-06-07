@@ -1,0 +1,24 @@
+<h2>Question</h2>
+
+<h4>
+	Which company makes the best Iphone 4 case?
+</h4>
+
+
+<ul id="chat">
+  <%= render @messages %>
+</ul>
+
+<div class="message_form">
+	<%= form_for current_user.messages.new, :remote => true do |f| %>
+	<div class="field">
+	  <%= f.text_field :content %>
+	</div>
+	<div class="field">
+		<%= f.hidden_field :user_id %>
+	</div>	
+	<div class="actions">
+		<%= f.submit "Send" %>
+	</div>
+	<% end %>
+</div>

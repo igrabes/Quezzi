@@ -1,20 +1,25 @@
 DeviseApp::Application.routes.draw do
   
   match '/auth/:provider/callback' => 'authentications#create'
-  
+  match ':controller(/:action(/:id(.:format)))'
   
   resources :authentications
   resources :pages
   devise_for :users, :controllers => {:registrations => 'registrations'} do
+    resources :chat
     resources :messages
   end
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
+  match "/chat/:id" => "chat#view"
+  match "/new" => "chat#new"
   
   root :to => "pages#home"
  
-
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
