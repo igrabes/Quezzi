@@ -1,5 +1,5 @@
 body {
-  background: url("/images/tile.png") repeat;
+  background: url("tile.png") repeat;
   /*font-family: Verdana, Helvetica, Arial;*/
   font-family: "Lucida Grande", Arial, sans-serif;
   font-size: 14px;
