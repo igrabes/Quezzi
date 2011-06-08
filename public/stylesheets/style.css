@@ -1,15 +1,7 @@
 /* == GLOBALS == */
 
-body
-{
-    background: #00816D;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	margin: 0;
-	padding: 0;
-}
 * { outline: none; }
 a, a:active, a:visited { color: #3f8eda; font-weight: bold; text-decoration: none; border: 0; padding-bottom: 1px; }
-a:hover, a:visited:hover { border-bottom: 1px solid #3f8eda; }
 a.button:hover, a.button:visited:hover { border-bottom: none; }
 
 button, input[type=submit], input[type=button] {
