@@ -7,24 +7,25 @@
 
 <%= javascript_include_tag "http://js.pusherapp.com/1.7/pusher.min.js", "chat" %>
 
-<%= @messages.each do |message| %>
-	<td><%= @chat.channel %></td>
-<% end %>
-<div id="wrapper">
-	<div class="header">
-		<div id="title" class="member_list_title">Pusher Chat (<span id="room_count">0</span>)</div>
-		<a href="#" id="editNickname">Change Nickname</a>
-			<input type="text" value="<%= @user.nickname %>" id="nickname" />
-			<a href="#" id="saveNickname">Save</a>
-		<a class="right tiptip" href="#" title="<b>How to Invite...</b><br />Simply share the URL of this page with anybody else to invite them to the chatter!">Invite</a>
-		<span id="loading"></span>
+<div class="chat">
+	<div id="wrapper">
+		<div class="header">
+			<div id="title" class="member_list_title">Pusher Chat (<span id="room_count">0</span>)</div>
+			<a href="#" id="editNickname">Change Nickname</a>
+				<input type="text" value="<%= @user.nickname %>" id="nickname" />
+				<a href="#" id="saveNickname">Save</a>
+			<a class="right tiptip" href="#" title="<b>How to Invite...</b><br />Simply share the URL of this page with anybody else to invite them to the chatter!">Invite</a>
+			<span id="loading"></span>
+		</div>
+		<ul id="messages">
+			<% @messages.each do |message| %>
+				<% user = ChatUser.find(message.user_id) %>
+				<li<% if user.id == @user.id %> class="you"<% end %>><strong><%= user.nickname %></strong> said:<br><%= auto_link_urls(message.message, { :target => "_blank" }) %></li>
+			<% end %>
+		</ul>
+		<div id="message-overlay"></div>
+		<textarea disabled="disabled" id="message" name="message">Type your message here and hit enter...</textarea>
 	</div>
-	<ul id="messages">
-		<% @messages.each do |message| %>
-			<% user = ChatUser.find(message.user_id) %>
-			<li<% if user.id == @user.id %> class="you"<% end %>><strong><%= user.nickname %></strong> said:<br><%= auto_link_urls(message.message, { :target => "_blank" }) %></li>
-		<% end %>
-	</ul>
-	<div id="message-overlay"></div>
-	<textarea disabled="disabled" id="message" name="message">Type your message here and hit enter...</textarea>
 </div>
+
+

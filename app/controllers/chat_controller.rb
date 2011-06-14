@@ -1,17 +1,23 @@
 class ChatController < ApplicationController
   
   def new
-     chat = Chat.new
-     chat.owner = ChatUser.user(session)
-     if chat.save
-       chat_tiny = Tiny::tiny(chat.id)
-         chat.channel = "message_channel_" + chat.id.to_s
-         chat.save
-       redirect_to :action => "view", :id => chat_tiny
-      else
-        redirect_to authentications_url
-     end
-   end
+    chat = Chat.find(params[:chat])
+  end
+  
+  
+  
+  # def new
+  #     chat = Chat.new
+  #     chat.owner = ChatUser.user(session)
+  #     if chat.save
+  #       chat_tiny = Tiny::tiny(chat.id)
+  #         chat.channel = "message_channel_" + chat.id.to_s
+  #         chat.save
+  #       redirect_to :action => "view", :id => chat_tiny
+  #      else
+  #        redirect_to authentications_url
+  #     end
+  #   end
 
    def view
 
@@ -20,12 +26,12 @@ class ChatController < ApplicationController
        @user = ChatUser.user(session)
        @messages = Message.find(:all, :conditions => ["chat_id = ?", @chat.id.to_s])
      else
-       redirect_to :controller => 'index', :action => 'index'
+       redirect_to :controller => 'message', :action => 'index'
      end
 
    end
    
-   # def index  
-   #     chat = Chat.all
-   #    end
+   def index  
+    @chat = Chat.all
+  end
 end

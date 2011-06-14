@@ -1,5 +1,5 @@
 body {
-  background: url("tile.png") repeat;
+  background: url("/images/tile.png") repeat;
   /*font-family: Verdana, Helvetica, Arial;*/
   font-family: "Lucida Grande", Arial, sans-serif;
   font-size: 14px;
@@ -209,6 +209,14 @@ nav ul li a:visited {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+/*  Chat Page */
+
+/*.chat header {
+	margin-bottom: 1000px;
+}*/
+
+
 
 /*Flash Notices, Errors and Alerts*/
 

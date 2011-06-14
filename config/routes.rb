@@ -16,8 +16,7 @@ DeviseApp::Application.routes.draw do
   match "/new" => "chat#new"
   
   root :to => "pages#home"
- 
-  
+
   
   
   # The priority is based upon order of creation:

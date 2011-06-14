@@ -6,18 +6,12 @@
     </div>
 
     <div class="inner">
-		<p>A real-time chat web app powered by <a href="http://pusherapp.com/" target="_blank">Pusher</a>, built by <a href="http://tarnfeld.com/" target="_blank"></a><br />To start a new chat, click below.</p>
-		<p>This is my first <b>Ruby on Rails</b> web application so please email any bugs you find to tarnfeld [at] me.com for me to take a look at and learn from. Thanks.</p>
+		<p>A real-time chat web app powered by <a href="http://pusherapp.com/" target="_blank">Pusher</a>, built by <a href="http://tarnfeld.com/" target="_blank"></a><br />To join in on the current chat, click below.</p>
 
-		<%= link_to({:controller => "chat", :action => "new"}, {:class => "button"}) do %>
+		<%= link_to({:controller => "chat", :action => "view", :id => "1"}, {:class => "button"}) do %>
 			<button>New Chat</button>
 		<% end %>
-		
-		<h4 class="help">With help from...</h4>
-			<li><a href="http://forrst.com/posts/Hey_Forrsters_I_started_learning_Ruby_Rails-Cv0" target="_blank">Forrst Members</a> (Awesome Comments!)</li>
-			<li><a href="http://drewwilson.com/" target="_blank">Drew Wilson</a> (For his jQuery <a href="http://code.drewwilson.com/entry/tiptip-jquery-plugin" target="_blank">tipTip</a> plugin!)</li>
-		</ul>
-		
+
 	</div>
 
 </div>
