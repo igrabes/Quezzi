@@ -1,0 +1,8 @@
+<table>
+	<%= @chats.each do |chat| %>
+		<tr>
+			<td><%= chat.owner %></td>
+			<td><%= link_to chat.channel, chat %></td>
+		</tr>
+	<% end  %>
+</table>
