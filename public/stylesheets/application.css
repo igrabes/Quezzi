@@ -12,7 +12,7 @@ a img {
 }
 
 a {
-  color: #888;
+  color: #000;
 }
 
 .clear {
@@ -97,37 +97,63 @@ header {
 	padding: 10px;
 }
 
+
 /* Landing Page Button */
 
 a.button {
-    background: transparent url('/images/bg_button_a.gif') no-repeat scroll top right;
-    color: #444;
-    display: block;
-    float: left;
-    font: normal 12px arial, sans-serif;
-    height: 24px;
-    margin-right: 100px;
-    padding-right: 18px; /* sliding doors padding */
-    text-decoration: none;
+    font-size:30px;
+		color:#268b6d;
+		text-decoration:none;
+		display:block;
+		width:300px;
+		padding:10px;
+		border:1px solid #DDD;
+		text-align:center;
+		
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		-o-border-radius:10px;
+		border-radius:10px;
+		
+		background:#FFFFFF;
+		background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EEE));
+		background:-moz-linear-gradient(0% 90% 90deg, #EEE, #FFF);
+
+		-webkit-transition: all .01s ease-in-out;
+		-moz-transition: all .01s ease-in-out;
+		-o-transition: all .01s ease-in-out;
+		transition: all .01s ease-in-out;
+		
+		-moz-box-shadow: 0px 0px 10px rgba(0.5, 0, 0, 0.40);
+	  -webkit-box-shadow: 0px 0px 10px rgba(0.5, 0, 0, 0.40);
+		
 }
 
-a.button span {
-    background: transparent url('images/bg_button_span.gif') no-repeat;
-    display: block;
-    line-height: 14px;
-    padding: 5px 0 5px 30px;
+a.button:hover {
+	color: #fff;
+	border-color: #fff ;
+	
+	background:#268b6d;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#1ac593), to(#268b6d));
+	background:-moz-linear-gradient(0% 90% 90deg, #268b6d, #1ac593);
+	
 }
 
 a.button:active {
-    background-position: bottom right;
-    color: #000;
-    outline: none; /* hide dotted outline in Firefox */
+	background:#268b6d;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#268b6d), to(#1ac593));
+	background:-moz-linear-gradient(0% 90% 90deg, #1ac593, #268b6d);
+	
 }
 
-a.button:active span {
-    background-position: bottom left;
-    padding: 5px 0 5px 30px; /* push text down 1px */
+a.button.notransitions {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
 }
+
+
 
 /* Sign In */
 
@@ -203,7 +229,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #000;
 }
 
 nav ul li a:hover {

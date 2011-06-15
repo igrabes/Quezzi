@@ -1,12 +1,12 @@
 /* == GLOBALS == */
 
 * { outline: none; }
-a, a:active, a:visited { color: #3f8eda; 
+/*a, a:active, a:visited { color: #3f8eda; 
 	font-weight: bold; 
 	text-decoration: none; 
 	border: 0; 
 	padding-bottom: 1px; 
-	}
+	}*/
 
 a.button:hover, a.button:visited:hover { 
 	border-bottom: none; 
